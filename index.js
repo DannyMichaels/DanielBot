@@ -45,5 +45,5 @@ client.on("message", (message) => {
   }
 });
 
-// client.login(config.token); // when starting from terminal
-client.login(process.env.TOKEN); // when deploying from heroku/github for 24/7 live server.
+client.login(config.token); // when starting from terminal
+// client.login(process.env.TOKEN); // when deploying from heroku/github for 24/7 live server.

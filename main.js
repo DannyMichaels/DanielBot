@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-const config = require('./config.json');
+const config = require("./config.json");
 
 const client = new Discord.Client();
 
@@ -36,7 +36,9 @@ client.on("message", (message) => {
     client.commands.get("youtube").execute(message, args);
   } else if (command == "member") {
     client.commands.get("member").execute(message, args);
+  } else if (command == "github") {
+    client.commands.get("github").execute(message, args);
   }
 });
 
-client.login(config.token)
+client.login(config.token);

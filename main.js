@@ -38,6 +38,8 @@ client.on("message", (message) => {
     client.commands.get("member").execute(message, args);
   } else if (command == "github") {
     client.commands.get("github").execute(message, args);
+  } else if (command == 'kick') {
+    client.commands.get('kick').execute(message,args)
   }
 });
 

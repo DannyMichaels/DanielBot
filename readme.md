@@ -5,7 +5,7 @@ This is just something I'm trying for fun before starting to learn backend devel
 
 ## Commands:
 
-Commands start with the prefix '!'. 
+Commands start with the prefix '!'. <br />
 For example: !ping ('!' is the prefix, 'ping' is the command)
 
 - !member (get the member role)

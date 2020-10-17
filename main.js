@@ -14,6 +14,13 @@ const commandFiles = fs
   .readdirSync("./commands")
   .filter((file) => file.endsWith(".js"));
 
+
+  
+client.off('ready', function () {
+  console.log(`${bot.user.username} is offline!`)
+  message.channel.send("Beep Boop, going offline!");
+})
+
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
 
@@ -21,7 +28,8 @@ for (const file of commandFiles) {
 }
 
 client.once("ready", () => {
-  console.log("DanielBot is online!");
+  console.log(`${client.user.username} is online!`)
+  
 });
 
 client.on("message", (message) => {
@@ -46,5 +54,5 @@ client.on("message", (message) => {
   }
 });
 
-// client.login(config.token);
-client.login(proccess.env.token);
+// client.login(config.token); // when starting from terminal
+client.login(process.env.token); // when deploying from heroku/github for 24/7 live server.

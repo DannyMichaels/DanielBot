@@ -14,13 +14,6 @@ const commandFiles = fs
   .readdirSync("./commands")
   .filter((file) => file.endsWith(".js"));
 
-
-  
-client.off('ready', function () {
-  console.log(`${bot.user.username} is offline!`)
-  message.channel.send("Beep Boop, going offline!");
-})
-
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
 
@@ -28,8 +21,7 @@ for (const file of commandFiles) {
 }
 
 client.once("ready", () => {
-  console.log(`${client.user.username} is online!`)
-  
+  console.log(`${client.user.username} is online!`);
 });
 
 client.on("message", (message) => {
@@ -46,13 +38,12 @@ client.on("message", (message) => {
     client.commands.get("member").execute(message, args);
   } else if (command == "github") {
     client.commands.get("github").execute(message, args);
-  } else if (command == 'kick') {
-    client.commands.get('kick').execute(message,args)
-  } else if (command == 'ban') {
-    client.commands.get('ban').execute(message,args)
-
+  } else if (command == "kick") {
+    client.commands.get("kick").execute(message, args);
+  } else if (command == "ban") {
+    client.commands.get("ban").execute(message, args);
   }
 });
 
 // client.login(config.token); // when starting from terminal
-client.login(process.env.token); // when deploying from heroku/github for 24/7 live server.
+client.login(process.env.TOKEN); // when deploying from heroku/github for 24/7 live server.

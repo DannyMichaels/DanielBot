@@ -15,4 +15,5 @@ For example: !ping ('!' is the prefix, 'ping' is the command)
 
 ### Changelogs:
 
-- October 17, 2020 : Initialzied bot and repo, gave it some basic commands.
+- October 17, 2020 11AM : Initialzied bot and repo, gave it some basic commands.
+- October 17, 2020 8:25PM : Added basic reaction functionality.

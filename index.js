@@ -4,6 +4,7 @@ const config = require("./config.json");
 
 const client = new Discord.Client();
 
+const roleClaim = require('./role-claim')
 const prefix = config.prefix;
 
 const fs = require("fs");
@@ -22,6 +23,7 @@ for (const file of commandFiles) {
 
 client.once("ready", () => {
   console.log(`${client.user.username} is online!`);
+  roleClaim(client)
 });
 
 client.on("message", (message) => {

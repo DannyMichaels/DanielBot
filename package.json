@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest __tests__ --detectOpenHandles --forceExit --testTimeout=10000 ",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.3.1"
+    "axios": "^0.27.2",
+    "discord.js": "^12.3.1",
+    "dotenv": "^16.0.2",
+    "nodemon": "^2.0.19"
   }
 }

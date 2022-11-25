@@ -21,6 +21,12 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
   console.log(`${client.user.username} is online!`);
+
+  // setInterval(() => {
+  //   client.channels.cache
+  //     .get('697600112213360663')
+  //     .send('@everyone COD NOW');
+  // }, 1000);
 });
 
 client.on('message', async (message) => {
@@ -37,6 +43,8 @@ client.on('message', async (message) => {
     client.commands.get('ban').execute(message, args);
   } else if (command === 'meme') {
     await client.commands.get('meme').execute(message, args);
+  } else if (command === 'clearchat') {
+    await client.commands.get('clearchat').execute(message, client);
   }
 });
 

@@ -24,8 +24,8 @@ client.once('ready', () => {
 
   // setInterval(() => {
   //   client.channels.cache
-  //     .get('697600112213360663')
-  //     .send('@everyone COD NOW');
+  //     .get('1044000628084572211')
+  //     .send('<@797656862308302879> COD NOW');
   // }, 1000);
 });
 
@@ -39,12 +39,14 @@ client.on('message', async (message) => {
     client.commands.get('ping').execute(message, args);
   } else if (command === 'kick') {
     client.commands.get('kick').execute(message, args);
-  } else if (command == -'ban') {
+  } else if (command === 'ban') {
     client.commands.get('ban').execute(message, args);
   } else if (command === 'meme') {
     await client.commands.get('meme').execute(message, args);
   } else if (command === 'clearchat') {
     await client.commands.get('clearchat').execute(message, client);
+  } else if (command === 'botsay') {
+    await client.commands.get('botsay').execute(message, client, args);
   }
 });
 
